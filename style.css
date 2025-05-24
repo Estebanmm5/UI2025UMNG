@@ -1,0 +1,220 @@
+/*Reset styles*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    padding-inline: 5em;
+    font-family: "DM Sans", sans-serif;
+}
+li{
+    list-style: none;
+}
+button{
+    border: none;
+}
+/*style menu*/
+#menu{
+    border: solid red 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/*style lista menú*/
+#menu ul{
+    width: 40%;
+    border: solid blue 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Button*/
+.btn{
+    background-color: #664efc; ;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    border-radius: 2px;
+}
+.btnbanner{
+    background-color: #664efc; ;
+    width: 50%;
+    padding: 1em;
+    color: white;
+    border-radius: 2px;
+}
+#banner{
+    width: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid blue 2px;
+}
+.strongbanner{
+    color: #664efc;
+}
+.izqbanner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+.derbanner{
+    width: 100%;
+}
+.izqbanner h1{
+    width: 100%;
+    font-size: 2.618em;
+    font-size: normal;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: solid red 2px;
+}
+.derbanner img{
+    width: 80%;
+}
+.izqbanner img{
+    width: 50%;
+}
+
+#sc1{
+    width: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    border: solid red 2px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#sc2{
+    width: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    border: solid green 2px;
+    align-items: center;
+    justify-content: center;
+}
+.dersc1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: solid red 2px;
+}
+
+.dersc1 img{
+    width: 50%;
+}
+.dersc2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+.izqsc1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+.izqsc2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: solid red 2px;
+}
+.izqsc2 img{
+    width: 80%;
+}
+
+#pie {
+    background-color: gainsboro;
+    display: flex;
+    width: 100%;
+    gap:8em;
+    padding: 3em 0 3em 0;
+}
+.derpie {
+    flex:70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.izqpie {
+    flex:30%
+}
+
+.derpie article h3, p{
+    padding-bottom: 1em;
+
+}
+#menu-ham{
+    display: none;
+}
+.icono-menu{
+    display: none;
+}
+
+/*celular*/
+@media only screen and (min-width: 300px) and (max-width:768px){
+    body{
+        padding-inline: 1em;
+    }
+    .icono-menu{
+        display: block;
+    }
+    #menu ul{
+        display: none;
+    }
+    #menu-ham:checked ~ .menuham{
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: aliceblue;
+    }
+
+    #menu{
+        position: relative;
+    }
+
+    #banner, #sc1, #sc2{
+            flex-direction: column-reverse;
+            gap: 2em;
+    }
+    
+    #pie {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .derpie{
+        grid-template-columns: 1fr 1fr;
+    } 
+      
+}
+/*tablet*/
+@media only screen and (min-width: 769px) and (max-width:1200px){
+    body{
+        padding-inline: 1em;
+    }
+    #banner{
+            flex-direction: column-reverse;
+    }
+    .derpie{
+        grid-template-columns: 1fr 1fr;
+    }
+}
